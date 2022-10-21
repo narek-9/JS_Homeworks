@@ -2,15 +2,8 @@
 
 "use strict";
 
-
-let min = 1;
-let max = 90;
-
-let firstAngle = Math.floor(Math.random()*(max - min) ) + min;
-console.log("First angle of the triangle = " + firstAngle);
-
-let secondAngle = Math.floor(Math.random()*(max - min) ) + min;
-console.log("Second angle of the triangle = " + secondAngle);
+let firstAngle = 45;
+let secondAngle = 90;
 
 let thirdAngle = 180 - firstAngle - secondAngle;
-console.log("Third angle of the triangle = " + thirdAngle);
+console.log("Third angle = " + thirdAngle);
