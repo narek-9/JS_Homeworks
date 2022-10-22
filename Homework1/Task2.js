@@ -2,17 +2,5 @@
 
 "use strict";
 
-// let n = 3;
-// let n = 17;
-let n = 100;
-n = String(n);
-
-let nn = n + n;
-let nnn = nn + n;
-
-n = Number(n);
-nn = Number(nn);
-nnn = Number(nnn);
-
-let result = n + nn + nnn;
-console.log(result);
+let n = 3;
+console.log(n * 100 + 20 * n + 3 * n);
