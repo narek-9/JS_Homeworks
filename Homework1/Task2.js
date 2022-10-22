@@ -1,5 +1,18 @@
 // Given number n (positive integer). Print the value of n + nn + nnn(not multiplication).
 
-let number = Math.floor(Math.random() * (15 - 1) ) + 1;
-console.log("n = " + number);
-console.log(`${number}${number * 2}${number * 3}`);
+"use strict";
+
+// let n = 3;
+// let n = 17;
+let n = 100;
+n = String(n);
+
+let nn = n + n;
+let nnn = nn + n;
+
+n = Number(n);
+nn = Number(nn);
+nnn = Number(nnn);
+
+let result = n + nn + nnn;
+console.log(result);
