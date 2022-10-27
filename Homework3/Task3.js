@@ -2,13 +2,17 @@
 // a) is equilateral,
 // b) is equal. Otherwise, emit False.
 
-let a = 8;
-let b = 12;
+let a = 10;
+let b = 8;
 let c = 8;
 
 let trueValue = true;
-if ((a === b) === c) {
-   console.log(trueValue);
-} else if (a === b || a === c || b === c) {
+if (a === b && b === c) {
+   console.log("Yes");
+} else if (
+   (a === b && a !== c) ||
+   (a === c && a !== b) ||
+   (b === c && b !== a)
+) {
    console.log(trueValue);
 } else console.log(!trueValue);
