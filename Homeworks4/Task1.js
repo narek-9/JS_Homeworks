@@ -9,7 +9,6 @@
 
 let number = 395;
 let array = ("" + number).split("").map(Number);
-console.log(array);
 
 if (array[0] === array[1] || array[0] === array[2] || array[1] === array[2]) {
    console.log(true);
