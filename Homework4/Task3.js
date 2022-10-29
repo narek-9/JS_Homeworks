@@ -1,3 +1,4 @@
+
 // Calculate and express the value of the 
 // Smallest digit of a three-digit number.
 
