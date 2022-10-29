@@ -14,7 +14,7 @@ if (array[0] === array[1] || array[0] === array[2] || array[1] === array[2]) {
    console.log(true);
 } else if (number === (array[0] + array[1] + array[2]) ** 2) {
    console.logg(true);
-} else if (array[0] === 5 || array[array.length - 1] === 5) {
+} else if (array[0] === 5 && array[array.length - 1] === 5) {
    console.log(true);
 } else if (array[0] * array[1] * array[2] > 200) {
    console.log(true);
