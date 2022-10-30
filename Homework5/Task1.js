@@ -5,7 +5,7 @@
 // d) the product of even digits less than 7,
 // e) the square of the difference between the largest and smallest digits.
 
-let number = 466;
+let number = 546;
 let array = ("" + number).split("").map(Number);
 
 // a)
@@ -40,23 +40,37 @@ if (oddDigitsArray.length > 0) {
 console.log();
 
 // c)
-let oddDigitsSum = 0;
+let unevenDigitsArray = [];
 for (let i = 0; i < array.length; i++) {
-   if (array[i] > 4 && array[i] % 2 !== 0) {
-      oddDigitsSum += array[i];
+   if (array[i] % 2 !== 0 && array[i] > 4) {
+      unevenDigitsArray.push(array[i]);
    }
 }
-console.log("Odd digits sum = " + oddDigitsSum);
+
+let oddDigitsSum = 0;
+if (unevenDigitsArray.length > 0) {
+   for (let i = 0; i < unevenDigitsArray.length; i++) {
+      oddDigitsSum += unevenDigitsArray[i];
+   }
+   console.log("Odd digits sum = " + oddDigitsSum);
+} else console.log("There are no uneven digits more than 4");
 console.log();
 
 // d)
-let evenDigitsMultiply = 1;
+let evenDigitsArray = [];
 for (let i = 0; i < array.length; i++) {
-   if (array[i] < 7 && array[i] % 2 === 0) {
-      evenDigitsMultiply *= array[i];
+   if (array[i] % 2 === 0 && array[i] < 7) {
+      evenDigitsArray.push(array[i]);
    }
 }
-console.log("Multiplication of even digits = " + evenDigitsMultiply);
+
+let evenDigitsMultiply = 1;
+if (evenDigitsArray.length > 0) {
+   for (let i = 0; i < evenDigitsArray.length; i++) {
+      evenDigitsMultiply *= evenDigitsArray[i];
+   }
+   console.log("Multiplication of even digits = " + evenDigitsMultiply);
+} else console.log("There are no even digits less than 7");
 console.log();
 
 // e)
