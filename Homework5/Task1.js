@@ -5,7 +5,7 @@
 // d) the product of even digits less than 7,
 // e) the square of the difference between the largest and smallest digits.
 
-let number = 917;
+let number = 794;
 let array = ("" + number).split("").map(Number);
 
 // a)
@@ -42,7 +42,8 @@ console.log();
 // c)
 let oddDigitsSum = 0;
 for (let i = 0; i < array.length; i++) {
-   if (array[i] % 2 !== 0 && array[i] > 4) {
+   if (array[i] === 0) continue;
+   else if (array[i] % 2 !== 0 && array[i] > 4) {
       oddDigitsSum += array[i];
    }
 }
@@ -54,13 +55,17 @@ console.log();
 // d)
 let evenDigitsMultiply = 1;
 for (let i = 0; i < array.length; i++) {
-   if (array[i] % 2 === 0 && array[i] < 7) {
+   if (array[i] === 0) continue;
+   else if (array[i] % 2 === 0 && array[i] < 7) {
       evenDigitsMultiply *= array[i];
    }
 }
-if (evenDigitsMultiply === 1 || evenDigitsMultiply === 0) {
+if (evenDigitsMultiply === 1) {
    console.log("There are no even digits less than 7");
-} else console.log("Multiplication of even digits less than 7 = " + evenDigitsMultiply);
+} else
+   console.log(
+      "Multiplication of even digits less than 7 = " + evenDigitsMultiply
+   );
 console.log();
 
 // e)
