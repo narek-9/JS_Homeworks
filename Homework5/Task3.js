@@ -27,9 +27,7 @@ for (let i = 0; i < array.length; i++) {
       if (array[i] !== 5) {
          console.log("YES");
       } else console.log("NO");
-   } else if (array[i] !== 5) {
-      continue;
-   } else {
+   } else if (array[i] == 5) {
       console.log("NO");
       break;
    }
