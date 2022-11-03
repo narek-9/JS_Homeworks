@@ -3,8 +3,10 @@
 let n = +prompt("Enter the number n");
 let array = [0, 1];
 let sum = 1;
-for (let i = 2; i < n; i++) {
+let i = 2;
+while (i < n) {
    array[i] = array[i - 1] + array[i - 2];
    sum += array[i];
+   i++;
 }
 console.log("Sum = " + sum);
