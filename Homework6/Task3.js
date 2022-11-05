@@ -1,4 +1,7 @@
-let number = 5040;
+let number = +prompt("Enter value");
+while (isNaN(number)) {
+   number = +prompt("Enter value");
+}
 let initialValue = number;
 let divider = 1;
 while (number !== 1) {
