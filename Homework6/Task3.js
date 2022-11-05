@@ -6,7 +6,7 @@ while (number !== 1) {
       number /= divider;
       divider++;
    } else {
-      console.log(`${initialValue} is not factorial`);
+      console.log(`${initialValue} is not factorial of any number`);
       break;
    }
    if (number === 1) {
