@@ -14,7 +14,7 @@ while (n !== 0) {
    array.unshift(lastDigit);
 }
 
-function getBool(array) {
+function checkOrder(array) {
    for (let i = 0; i < array.length - 1; i++) {
       if (array[i] < array[i + 1]) {
          return true;
@@ -24,4 +24,4 @@ function getBool(array) {
    }
 }
 
-console.log(getBool(array));
+console.log(checkOrder(array));
