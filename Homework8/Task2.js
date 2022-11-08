@@ -2,19 +2,20 @@
 // b) the arithmetic mean of the even numbers found in it.
 
 // b
-let n = +prompt("Enter natural number"),
-   array = [];
-while (isNaN(n)) {
-   n = +prompt("Enter natural number again");
-}
 
-while (n !== 0) {
-   let lastDigit = n % 10;
-   n = (n - lastDigit) / 10;
-   array.unshift(lastDigit);
-}
+function getMean() {
+   let n = +prompt("Enter natural number"),
+      array = [];
+   while (isNaN(n)) {
+      n = +prompt("Enter natural number again");
+   }
 
-function getMean(array) {
+   while (n !== 0) {
+      let lastDigit = n % 10;
+      n = (n - lastDigit) / 10;
+      array.unshift(lastDigit);
+   }
+
    let result = 0;
    let count = 0;
    for (let i = 0; i < array.length; i++) {
@@ -23,11 +24,11 @@ function getMean(array) {
          count++;
       }
    }
-   if (count === 0) return "There are no even digits";
+   if (count === 0) return "There are no even numbers";
    else {
       result /= count;
-      return result;
+      return "Arithmetic mean of the even numbers = " + result;
    }
 }
 
-console.log(getMean(array));
+console.log(getMean());
