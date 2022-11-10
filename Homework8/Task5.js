@@ -20,6 +20,6 @@ function getMaxDigitIndex() {
          maxNumber = array[i];
       }
    }
-   return "Index of the largest digit = " + array.indexOf(maxNumber);
+   return array.indexOf(maxNumber);
 }
-console.log(getMaxDigitIndex());
+console.log("Index of the largest digit = " + getMaxDigitIndex());
