@@ -18,9 +18,8 @@ function checkOrder() {
    for (let i = 0; i < array.length - 1; i++) {
       if (array[i] < array[i + 1]) {
          return true;
-      } else if (i === array.length - 2 && array[i] >= array[i + 1]) {
-         return false;
       }
+      return false;
    }
 }
 
