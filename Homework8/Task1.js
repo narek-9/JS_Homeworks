@@ -16,13 +16,12 @@ function getCount() {
       array.unshift(lastDigit);
    }
 
-   let count = 0;
    for (let i = 1; i < array.length; i++) {
       if (array[i] === array[0]) {
          count++;
       }
    }
-   return array[0] + " occurs " + count + " times";
+   return array[0];
 }
-
-console.log(getCount());
+let count = 0;
+console.log(getCount() + " occurs " + count + " times");
