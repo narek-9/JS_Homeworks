@@ -24,10 +24,10 @@ function getMean() {
          count++;
       }
    }
-   if (count === 0) return "There are no even numbers";
+   if (count === 0) return;
    else {
       result /= count;
-      return "Arithmetic mean of the even numbers = " + result;
+      return result;
    }
 }
 
