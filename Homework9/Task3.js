@@ -1,0 +1,2 @@
+// Write a function that takes an array n as an argument, which contains natural numbers, and returns:
+// A new array containing only those numbers that had only even-digit neighbors in the given n array.
