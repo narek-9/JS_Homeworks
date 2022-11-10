@@ -1,6 +1,6 @@
 // Write a function that takes an array n as an argument, which contains natural numbers, and returns:
 // 1. The same array in which the numbers are arranged in ascending order.
-// BUT. sort() method,
+// A. sort() method,
 // B. using your own declared function.
 
 let initialArr = getArray();
