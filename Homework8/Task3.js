@@ -19,8 +19,8 @@ function checkOrder() {
       if (array[i] < array[i + 1]) {
          return true;
       }
-      return false;
    }
+   return false;
 }
 
 console.log(checkOrder());
