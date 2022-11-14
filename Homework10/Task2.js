@@ -25,11 +25,14 @@
 let n = +prompt("Enter first positive number");
 let m = +prompt("Enter second positive number");
 
-function GCD(n, m) {
+function greatestCommonDivisor(n, m) {
    if (n === m) {
       return n;
    } else if (n > m) {
-      return GCD(n - m, m);
-   } else return GCD(n, m - n);
+      return greatestCommonDivisor(n - m, m);
+   } else return greatestCommonDivisor(n, m - n);
 }
-console.log(`The greatest common divisor of ${n} and ${m} = ` + GCD(48, 204));
+console.log(
+   `The greatest common divisor of ${n} and ${m} = ` +
+      greatestCommonDivisor(n, m)
+);
