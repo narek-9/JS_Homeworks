@@ -15,14 +15,10 @@ function getArray() {
 function sortArray(arr) {
    let finalArray = [];
    for (let i = 0; i < arr.length; i++) {
-      if (i === 0) {
-         if (arr[i + 1] % 2 === 0) {
-            finalArray.push(arr[i]);
-         }
-      } else if (i === arr.length - 1) {
-         if (arr[i - 1] % 2 === 0) {
-            finalArray.push(arr[i]);
-         }
+      if (i === 0 && arr[i + 1] % 2 === 0) {
+         finalArray.push(arr[i]);
+      } else if (i === arr.length - 1 && arr[i - 1] ^ (2 === 0)) {
+         finalArray.push(arr[i]);
       } else if (arr[i - 1] % 2 === 0 && arr[i + 1] % 2 === 0) {
          finalArray.push(arr[i]);
       }
