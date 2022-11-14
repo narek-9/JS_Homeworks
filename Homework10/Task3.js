@@ -9,12 +9,12 @@ function createArray() {
    console.log("array" + " = " + "[" + array + "]");
    return array;
 }
-function sumRec(array, sum, i) {
+function sum(array, result, i) {
    if (i === array.length) {
-      return sum;
+      return result;
    } else {
-      sum += array[i];
-      return sumRec(array, sum, i + 1);
+      result += array[i];
+      return sum(array, result, i + 1);
    }
 }
-console.log("sum = " + sumRec(createArray(), 0, 0));
+console.log("sum = " + sum(createArray(), 0, 0));
