@@ -16,4 +16,4 @@ function getArray(n, m, array) {
    }
 }
 
-getArray(n, m, []);
+console.log(getArray(n, m, []));
