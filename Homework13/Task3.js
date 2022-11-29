@@ -14,7 +14,6 @@ let arr = [
    {
       name: "Anna",
       isWorking: false,
-      salary: 200000,
    },
    {
       name: "Aram",
