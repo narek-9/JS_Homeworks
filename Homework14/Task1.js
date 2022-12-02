@@ -1,7 +1,7 @@
 // Declare a function that takes the parameter received as an argument
 // will perform the deep copy operation
 
-const deepCopy = (value, abc) => {
+const deepCopy = (value) => {
    if (Array.isArray(value)) {
       const arr = [];
       for (const currentItem of value) {
