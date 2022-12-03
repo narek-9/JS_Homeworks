@@ -2,13 +2,14 @@
 // array, perform received array validation and return
 // the value of the second largest of the array elements.
 
-const getSecondMax = (value) => {
-   if (Array.isArray(value)) {
-      const firstMax = Math.max(...value);
-      value.splice(value.indexOf(firstMax), 1);
-      const secondMax = Math.max(...value);
-      return secondMax;
+const getSecondMax = (arr) => {
+   if (!validateArr(arr)) {
+      return "Your value is not an array";
    }
-   return "Enter valid value";
+   const maxValue = Math.max(...arr);
+   arr = arr.filter((currentValue) => currentValue !== maxValue);
+   return Math.max(...arr);
 };
-console.log(getSecondMax([5, 23, 45, 6, 78]));
+
+const validateArr = (arr) => Array.isArray(arr);
+console.log(getSecondMax([1, 2, 3, 4, 4]));
