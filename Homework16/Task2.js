@@ -11,9 +11,7 @@ const firstOddNumber = (arr, i) => {
             return !(arr[i] % 2)
                ? "There are no odd numbers in this array"
                : arr[i];
-         } else if (arr[i] % 2) {
-            return arr[i];
-         }
+         } else if (arr[i] % 2) return arr[i];
          return firstOddNumber(arr, i + 1);
       }
       return "There are no values in this array";
