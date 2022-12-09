@@ -8,7 +8,7 @@ const sortByAge = (users) =>
 
 console.log(
    sortByAge([
-      { name: "Vanik", age: 21 },
+      { name: "Ani", age: 21 },
       { name: "Alex", age: 17 },
       { name: "Nare", age: 34 },
       { name: "Mark", age: 20 },
