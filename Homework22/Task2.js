@@ -4,15 +4,14 @@ let john = { name: "John", surname: "Smith", id: 1 },
 
 let users = [john, mary, david];
 
-const makeFullname = (arr) => {
-   let newArr = [];
-   arr.forEach((element) => {
-      newArr.push({
-         fullname: `${element.name} ${element.surname}`,
-         id: element.id,
-      });
-   });
-   return newArr;
-};
+const makeFullname = (persons) =>
+   persons.reduce(
+      (data, value) =>
+         data.concat({
+            fullname: `${value.name} ${value.surname}`,
+            id: value.id,
+         }),
+      []
+   );
 
 console.log(makeFullname(users));
