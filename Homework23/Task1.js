@@ -33,4 +33,5 @@ const checkNeedSurgery = () => {
 
 checkNeedSurgery()
    .finally(() => alert("The answer of the test is ready..."))
-   .then((text) => alert(text));
+   .then((text) => alert(text))
+   .catch(() => alert("Error"));
