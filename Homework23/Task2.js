@@ -1,4 +1,9 @@
 function delay(ms) {
-   return new Promise((resolve, reject) => setTimeout((a) => resolve(), ms));
+   return new Promise((resolve, reject) =>
+      setTimeout(
+         () => resolve(`Should show modal after ${ms / 1000} seconds`),
+         ms
+      )
+   );
 }
-delay(2000).then(() => alert("Should show modal after 2 seconds"));
+delay(3).then((text) => alert(text));
