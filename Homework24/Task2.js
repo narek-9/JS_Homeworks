@@ -1,12 +1,11 @@
 setTimeout(function () {
-   let user;
+   let user = {};
    try {
       user.name = "John";
       alert(user);
    } catch (error) {
-      alert("The error has been handled");
-      if (error instanceof TypeError) {
+      if (error instanceof TypeError)
          throw new Error("The error is being generaed by me");
-      }
+      else alert("The error has been handled");
    }
 }, 2000);
