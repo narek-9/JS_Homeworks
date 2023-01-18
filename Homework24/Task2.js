@@ -1,5 +1,5 @@
 setTimeout(function () {
-   let user = {};
+   let user;
    try {
       user.name = "John";
       alert(user);
