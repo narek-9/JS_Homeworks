@@ -8,16 +8,12 @@ class User {
 
 const appleStore = (device, price) => {
    return (obj) => {
-      if (obj.cash - price >= 0) {
+      if (obj.cash >= price) {
          obj.cash -= price;
-         if (obj.products[device]) {
-            obj.products[device]++;
-            return obj;
-         }
-         obj.products[device] = 1;
-         return obj;
-      }
-      alert(`You don't have enough cash to buy this ${device}`);
+         obj.products[device] = obj.products.hasOwnProperty(device)
+            ? obj.products[device] + 1
+            : 1;
+      } else alert(`You don't have enough cash to buy this ${device}`);
       return obj;
    };
 };
